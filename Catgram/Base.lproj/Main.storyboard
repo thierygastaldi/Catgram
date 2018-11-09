@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bas-sf-jXV">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Details-->
+        <scene sceneID="WMt-yc-nSq">
+            <objects>
+                <viewController storyboardIdentifier="CatDetailsView" title="Details" id="d7h-ZO-frb" customClass="CatDetailsView" customModule="Catgram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fKC-NZ-KTc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="98o-bE-z67">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Ujt-w6-tSn">
+                                <rect key="frame" x="169" y="347" width="37" height="37"/>
+                                <color key="color" red="0.67843137249999996" green="0.76078431369999999" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="98o-bE-z67" firstAttribute="leading" secondItem="fKC-NZ-KTc" secondAttribute="leading" id="4a3-QC-rWH"/>
+                            <constraint firstAttribute="trailing" secondItem="98o-bE-z67" secondAttribute="trailing" id="Ckm-PS-z30"/>
+                            <constraint firstItem="98o-bE-z67" firstAttribute="top" secondItem="3mf-iy-aUY" secondAttribute="top" id="Nxc-mk-jeO"/>
+                            <constraint firstItem="98o-bE-z67" firstAttribute="centerX" secondItem="Ujt-w6-tSn" secondAttribute="centerX" id="XNa-Kz-bP1"/>
+                            <constraint firstItem="98o-bE-z67" firstAttribute="centerY" secondItem="Ujt-w6-tSn" secondAttribute="centerY" id="lFk-Zu-TuY"/>
+                            <constraint firstItem="98o-bE-z67" firstAttribute="bottom" secondItem="3mf-iy-aUY" secondAttribute="bottom" id="swg-l5-gOC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3mf-iy-aUY"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="loadingView" destination="Ujt-w6-tSn" id="r9v-Y7-zhF"/>
+                        <outlet property="photoImageView" destination="98o-bE-z67" id="oA0-Kn-bNl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K37-Xl-QtM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1375.2" y="102.99850074962519"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MKw-Kv-ghj">
+            <objects>
+                <navigationController storyboardIdentifier="CatNavigationController" id="bas-sf-jXV" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="kJP-DA-225">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="barTintColor" red="0.67843137254901964" green="0.76078431372549016" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="italicSystem" pointSize="22"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lmf-Z7-FlF" kind="relationship" relationship="rootViewController" id="Nuw-Pl-6eC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t8S-h0-dy6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-244" y="103"/>
+        </scene>
+        <!--Catgram-->
+        <scene sceneID="d9M-3P-Hmd">
+            <objects>
+                <viewController id="lmf-Z7-FlF" customClass="CatListView" customModule="Catgram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZSc-CX-i5S">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RA1-di-Py9">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="XsF-hz-eIJ">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="0.67843137249999996" green="0.76078431369999999" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RA1-di-Py9" firstAttribute="leading" secondItem="ZSc-CX-i5S" secondAttribute="leading" id="6us-db-Y4e"/>
+                            <constraint firstItem="XsF-hz-eIJ" firstAttribute="centerY" secondItem="ZSc-CX-i5S" secondAttribute="centerY" id="GON-jm-5a2"/>
+                            <constraint firstItem="RA1-di-Py9" firstAttribute="top" secondItem="tx8-je-4Qm" secondAttribute="top" id="TZR-de-yww"/>
+                            <constraint firstItem="RA1-di-Py9" firstAttribute="centerX" secondItem="XsF-hz-eIJ" secondAttribute="centerX" id="eFX-K0-ZYm"/>
+                            <constraint firstAttribute="trailing" secondItem="RA1-di-Py9" secondAttribute="trailing" id="kzE-HW-ViY"/>
+                            <constraint firstItem="RA1-di-Py9" firstAttribute="bottom" secondItem="tx8-je-4Qm" secondAttribute="bottom" id="vcZ-In-bfX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tx8-je-4Qm"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Catgram" id="vbr-fn-eos"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="loadingView" destination="XsF-hz-eIJ" id="Bbt-1Q-NpG"/>
+                        <outlet property="tableView" destination="RA1-di-Py9" id="nLP-0N-6gl"/>
+                        <segue destination="d7h-ZO-frb" kind="showDetail" id="77r-GX-0kY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dz1-g3-E8h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="535.20000000000005" y="102.99850074962519"/>
+        </scene>
+    </scenes>
+</document>

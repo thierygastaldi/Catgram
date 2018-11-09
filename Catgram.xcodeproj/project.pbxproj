@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A4770B2B2194F2B400D6D449 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4770B2A2194F2B400D6D449 /* Layout.swift */; };
+		A4770B2D2194FA8100D6D449 /* CatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4770B2C2194FA8100D6D449 /* CatTableViewCell.xib */; };
+		A4770B362195033800D6D449 /* iconeCurtir.png in Resources */ = {isa = PBXBuildFile; fileRef = A4770B302195033700D6D449 /* iconeCurtir.png */; };
+		A4770B372195033800D6D449 /* iconeCurtirSelecionado@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4770B312195033700D6D449 /* iconeCurtirSelecionado@2x.png */; };
+		A4770B382195033800D6D449 /* iconeCurtirSelecionado@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4770B322195033700D6D449 /* iconeCurtirSelecionado@3x.png */; };
+		A4770B392195033800D6D449 /* iconeCurtir@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4770B332195033700D6D449 /* iconeCurtir@3x.png */; };
+		A4770B3A2195033800D6D449 /* iconeCurtir@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4770B342195033700D6D449 /* iconeCurtir@2x.png */; };
+		A4770B3B2195033800D6D449 /* iconeCurtirSelecionado.png in Resources */ = {isa = PBXBuildFile; fileRef = A4770B352195033700D6D449 /* iconeCurtirSelecionado.png */; };
+		A4770B3D21950AF800D6D449 /* CatDetailsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4770B3C21950AF800D6D449 /* CatDetailsProtocol.swift */; };
+		A4770B3F21950C6B00D6D449 /* CatDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4770B3E21950C6B00D6D449 /* CatDetailsView.swift */; };
+		A4770B4121950E0E00D6D449 /* CatDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4770B4021950E0E00D6D449 /* CatDetailsInteractor.swift */; };
+		A4770B4321950E8E00D6D449 /* CatDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4770B4221950E8E00D6D449 /* CatDetailsRouter.swift */; };
+		A4770B4521950ECE00D6D449 /* CatDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4770B4421950ECE00D6D449 /* CatDetailsPresenter.swift */; };
+		A4770B48219521B600D6D449 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4770B47219521B600D6D449 /* Connectivity.swift */; };
+		A47F2CB72193BAE00065A729 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F2CB62193BAE00065A729 /* URLs.swift */; };
+		A47F2CB92193BBFC0065A729 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F2CB82193BBFC0065A729 /* Config.swift */; };
+		A4AA708921939566002AA233 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA708821939566002AA233 /* AppDelegate.swift */; };
+		A4AA708E21939566002AA233 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4AA708C21939566002AA233 /* Main.storyboard */; };
+		A4AA709021939568002AA233 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4AA708F21939568002AA233 /* Assets.xcassets */; };
+		A4AA709321939568002AA233 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4AA709121939568002AA233 /* LaunchScreen.storyboard */; };
+		A4AA709E2193A13F002AA233 /* CatListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA709D2193A13F002AA233 /* CatListProtocols.swift */; };
+		A4AA70A02193A7B5002AA233 /* CatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA709F2193A7B5002AA233 /* CatListView.swift */; };
+		A4AA70A22193A942002AA233 /* CatListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA70A12193A942002AA233 /* CatListRouter.swift */; };
+		A4AA70A42193AA4F002AA233 /* CatListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA70A32193AA4F002AA233 /* CatListPresenter.swift */; };
+		A4AA70A62193AB2D002AA233 /* CatListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA70A52193AB2D002AA233 /* CatListInteractor.swift */; };
+		A4AA70A92193AC90002AA233 /* CatInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA70A82193AC90002AA233 /* CatInfo.swift */; };
+		A4AA70AC2193AE74002AA233 /* CatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA70AB2193AE74002AA233 /* CatTableViewCell.swift */; };
+		FB6D4092396AE0CFE141860D /* Pods_Catgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4133D75E5D0E89C53E51AE /* Pods_Catgram.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4119FF36BF43835682C431C3 /* Pods-Catgram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catgram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Catgram/Pods-Catgram.debug.xcconfig"; sourceTree = "<group>"; };
+		94BD1F2CEB36D8890E337BBA /* Pods-Catgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catgram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Catgram/Pods-Catgram.release.xcconfig"; sourceTree = "<group>"; };
+		A4770B2A2194F2B400D6D449 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		A4770B2C2194FA8100D6D449 /* CatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CatTableViewCell.xib; sourceTree = "<group>"; };
+		A4770B302195033700D6D449 /* iconeCurtir.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconeCurtir.png; sourceTree = "<group>"; };
+		A4770B312195033700D6D449 /* iconeCurtirSelecionado@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconeCurtirSelecionado@2x.png"; sourceTree = "<group>"; };
+		A4770B322195033700D6D449 /* iconeCurtirSelecionado@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconeCurtirSelecionado@3x.png"; sourceTree = "<group>"; };
+		A4770B332195033700D6D449 /* iconeCurtir@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconeCurtir@3x.png"; sourceTree = "<group>"; };
+		A4770B342195033700D6D449 /* iconeCurtir@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconeCurtir@2x.png"; sourceTree = "<group>"; };
+		A4770B352195033700D6D449 /* iconeCurtirSelecionado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconeCurtirSelecionado.png; sourceTree = "<group>"; };
+		A4770B3C21950AF800D6D449 /* CatDetailsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailsProtocol.swift; sourceTree = "<group>"; };
+		A4770B3E21950C6B00D6D449 /* CatDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailsView.swift; sourceTree = "<group>"; };
+		A4770B4021950E0E00D6D449 /* CatDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailsInteractor.swift; sourceTree = "<group>"; };
+		A4770B4221950E8E00D6D449 /* CatDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailsRouter.swift; sourceTree = "<group>"; };
+		A4770B4421950ECE00D6D449 /* CatDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailsPresenter.swift; sourceTree = "<group>"; };
+		A4770B47219521B600D6D449 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
+		A47F2CB62193BAE00065A729 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		A47F2CB82193BBFC0065A729 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		A4AA708521939566002AA233 /* Catgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4AA708821939566002AA233 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A4AA708D21939566002AA233 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A4AA708F21939568002AA233 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A4AA709221939568002AA233 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A4AA709421939568002AA233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4AA709D2193A13F002AA233 /* CatListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListProtocols.swift; sourceTree = "<group>"; };
+		A4AA709F2193A7B5002AA233 /* CatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListView.swift; sourceTree = "<group>"; };
+		A4AA70A12193A942002AA233 /* CatListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListRouter.swift; sourceTree = "<group>"; };
+		A4AA70A32193AA4F002AA233 /* CatListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListPresenter.swift; sourceTree = "<group>"; };
+		A4AA70A52193AB2D002AA233 /* CatListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListInteractor.swift; sourceTree = "<group>"; };
+		A4AA70A82193AC90002AA233 /* CatInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatInfo.swift; sourceTree = "<group>"; };
+		A4AA70AB2193AE74002AA233 /* CatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTableViewCell.swift; sourceTree = "<group>"; };
+		CC4133D75E5D0E89C53E51AE /* Pods_Catgram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Catgram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A4AA708221939566002AA233 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB6D4092396AE0CFE141860D /* Pods_Catgram.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6355BEA315DB08F817820AC4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4119FF36BF43835682C431C3 /* Pods-Catgram.debug.xcconfig */,
+				94BD1F2CEB36D8890E337BBA /* Pods-Catgram.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6913A2123CCEFBCC39F7B90F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC4133D75E5D0E89C53E51AE /* Pods_Catgram.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A4770B292194F29400D6D449 /* api-utils */ = {
+			isa = PBXGroup;
+			children = (
+				A4770B2A2194F2B400D6D449 /* Layout.swift */,
+				A4770B47219521B600D6D449 /* Connectivity.swift */,
+			);
+			path = "api-utils";
+			sourceTree = "<group>";
+		};
+		A4770B2E2195033700D6D449 /* supporting-files */ = {
+			isa = PBXGroup;
+			children = (
+				A4770B2F2195033700D6D449 /* images */,
+			);
+			path = "supporting-files";
+			sourceTree = "<group>";
+		};
+		A4770B2F2195033700D6D449 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				A4770B302195033700D6D449 /* iconeCurtir.png */,
+				A4770B312195033700D6D449 /* iconeCurtirSelecionado@2x.png */,
+				A4770B322195033700D6D449 /* iconeCurtirSelecionado@3x.png */,
+				A4770B332195033700D6D449 /* iconeCurtir@3x.png */,
+				A4770B342195033700D6D449 /* iconeCurtir@2x.png */,
+				A4770B352195033700D6D449 /* iconeCurtirSelecionado.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		A4770B46219515A100D6D449 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A4770B3E21950C6B00D6D449 /* CatDetailsView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A47F2CB52193BABA0065A729 /* common-utils */ = {
+			isa = PBXGroup;
+			children = (
+				A47F2CB62193BAE00065A729 /* URLs.swift */,
+				A47F2CB82193BBFC0065A729 /* Config.swift */,
+			);
+			path = "common-utils";
+			sourceTree = "<group>";
+		};
+		A4AA707C21939566002AA233 = {
+			isa = PBXGroup;
+			children = (
+				A4AA708721939566002AA233 /* Catgram */,
+				A4AA708621939566002AA233 /* Products */,
+				6355BEA315DB08F817820AC4 /* Pods */,
+				6913A2123CCEFBCC39F7B90F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A4AA708621939566002AA233 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4AA708521939566002AA233 /* Catgram.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4AA708721939566002AA233 /* Catgram */ = {
+			isa = PBXGroup;
+			children = (
+				A4770B2E2195033700D6D449 /* supporting-files */,
+				A4770B292194F29400D6D449 /* api-utils */,
+				A47F2CB52193BABA0065A729 /* common-utils */,
+				A4AA709A21939E60002AA233 /* modules */,
+				A4AA708821939566002AA233 /* AppDelegate.swift */,
+				A4AA708C21939566002AA233 /* Main.storyboard */,
+				A4AA708F21939568002AA233 /* Assets.xcassets */,
+				A4AA709121939568002AA233 /* LaunchScreen.storyboard */,
+				A4AA709421939568002AA233 /* Info.plist */,
+			);
+			path = Catgram;
+			sourceTree = "<group>";
+		};
+		A4AA709A21939E60002AA233 /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				A4AA709C21939EB1002AA233 /* cat-details-module */,
+				A4AA709B21939EA8002AA233 /* cat-list-module */,
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
+		A4AA709B21939EA8002AA233 /* cat-list-module */ = {
+			isa = PBXGroup;
+			children = (
+				A4AA70AA2193AE43002AA233 /* view */,
+				A4AA70A72193AC5B002AA233 /* entity */,
+				A4AA709D2193A13F002AA233 /* CatListProtocols.swift */,
+				A4AA70A12193A942002AA233 /* CatListRouter.swift */,
+				A4AA70A32193AA4F002AA233 /* CatListPresenter.swift */,
+				A4AA70A52193AB2D002AA233 /* CatListInteractor.swift */,
+			);
+			path = "cat-list-module";
+			sourceTree = "<group>";
+		};
+		A4AA709C21939EB1002AA233 /* cat-details-module */ = {
+			isa = PBXGroup;
+			children = (
+				A4770B46219515A100D6D449 /* view */,
+				A4770B3C21950AF800D6D449 /* CatDetailsProtocol.swift */,
+				A4770B4021950E0E00D6D449 /* CatDetailsInteractor.swift */,
+				A4770B4221950E8E00D6D449 /* CatDetailsRouter.swift */,
+				A4770B4421950ECE00D6D449 /* CatDetailsPresenter.swift */,
+			);
+			path = "cat-details-module";
+			sourceTree = "<group>";
+		};
+		A4AA70A72193AC5B002AA233 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				A4AA70A82193AC90002AA233 /* CatInfo.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		A4AA70AA2193AE43002AA233 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A4770B2C2194FA8100D6D449 /* CatTableViewCell.xib */,
+				A4AA709F2193A7B5002AA233 /* CatListView.swift */,
+				A4AA70AB2193AE74002AA233 /* CatTableViewCell.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A4AA708421939566002AA233 /* Catgram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4AA709721939568002AA233 /* Build configuration list for PBXNativeTarget "Catgram" */;
+			buildPhases = (
+				8842FA1E368956ADD959DC63 /* [CP] Check Pods Manifest.lock */,
+				A4AA708121939566002AA233 /* Sources */,
+				A4AA708221939566002AA233 /* Frameworks */,
+				A4AA708321939566002AA233 /* Resources */,
+				083B97B4378B78A474ED1442 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Catgram;
+			productName = Catgram;
+			productReference = A4AA708521939566002AA233 /* Catgram.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A4AA707D21939566002AA233 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = TGR;
+				TargetAttributes = {
+					A4AA708421939566002AA233 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+				};
+			};
+			buildConfigurationList = A4AA708021939566002AA233 /* Build configuration list for PBXProject "Catgram" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A4AA707C21939566002AA233;
+			productRefGroup = A4AA708621939566002AA233 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A4AA708421939566002AA233 /* Catgram */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A4AA708321939566002AA233 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4770B2D2194FA8100D6D449 /* CatTableViewCell.xib in Resources */,
+				A4770B372195033800D6D449 /* iconeCurtirSelecionado@2x.png in Resources */,
+				A4AA709321939568002AA233 /* LaunchScreen.storyboard in Resources */,
+				A4770B362195033800D6D449 /* iconeCurtir.png in Resources */,
+				A4AA709021939568002AA233 /* Assets.xcassets in Resources */,
+				A4770B382195033800D6D449 /* iconeCurtirSelecionado@3x.png in Resources */,
+				A4AA708E21939566002AA233 /* Main.storyboard in Resources */,
+				A4770B3A2195033800D6D449 /* iconeCurtir@2x.png in Resources */,
+				A4770B3B2195033800D6D449 /* iconeCurtirSelecionado.png in Resources */,
+				A4770B392195033800D6D449 /* iconeCurtir@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		083B97B4378B78A474ED1442 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Catgram/Pods-Catgram-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Catgram/Pods-Catgram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8842FA1E368956ADD959DC63 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Catgram-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A4AA708121939566002AA233 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4770B3F21950C6B00D6D449 /* CatDetailsView.swift in Sources */,
+				A4AA709E2193A13F002AA233 /* CatListProtocols.swift in Sources */,
+				A4770B48219521B600D6D449 /* Connectivity.swift in Sources */,
+				A47F2CB72193BAE00065A729 /* URLs.swift in Sources */,
+				A4AA70A02193A7B5002AA233 /* CatListView.swift in Sources */,
+				A4770B3D21950AF800D6D449 /* CatDetailsProtocol.swift in Sources */,
+				A4AA708921939566002AA233 /* AppDelegate.swift in Sources */,
+				A4AA70A92193AC90002AA233 /* CatInfo.swift in Sources */,
+				A4AA70AC2193AE74002AA233 /* CatTableViewCell.swift in Sources */,
+				A4770B4321950E8E00D6D449 /* CatDetailsRouter.swift in Sources */,
+				A4AA70A42193AA4F002AA233 /* CatListPresenter.swift in Sources */,
+				A4770B4521950ECE00D6D449 /* CatDetailsPresenter.swift in Sources */,
+				A4770B2B2194F2B400D6D449 /* Layout.swift in Sources */,
+				A47F2CB92193BBFC0065A729 /* Config.swift in Sources */,
+				A4AA70A22193A942002AA233 /* CatListRouter.swift in Sources */,
+				A4770B4121950E0E00D6D449 /* CatDetailsInteractor.swift in Sources */,
+				A4AA70A62193AB2D002AA233 /* CatListInteractor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A4AA708C21939566002AA233 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4AA708D21939566002AA233 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A4AA709121939568002AA233 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4AA709221939568002AA233 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A4AA709521939568002AA233 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A4AA709621939568002AA233 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A4AA709821939568002AA233 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4119FF36BF43835682C431C3 /* Pods-Catgram.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Catgram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.tgr.Catgram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A4AA709921939568002AA233 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94BD1F2CEB36D8890E337BBA /* Pods-Catgram.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Catgram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.tgr.Catgram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A4AA708021939566002AA233 /* Build configuration list for PBXProject "Catgram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4AA709521939568002AA233 /* Debug */,
+				A4AA709621939568002AA233 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4AA709721939568002AA233 /* Build configuration list for PBXNativeTarget "Catgram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4AA709821939568002AA233 /* Debug */,
+				A4AA709921939568002AA233 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A4AA707D21939566002AA233 /* Project object */;
+}
