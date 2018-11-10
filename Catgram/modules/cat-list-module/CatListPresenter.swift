@@ -20,14 +20,24 @@ class CatListPresenter: CatListPresenterProtocol {
     func showCatDetails(with catInfo: CatInfo) {
         router?.pushCatDetailsModule(from: view!, with: catInfo)
     }
+    
+    func reloadData() {
+        interactor?.retrieveCatList()
+    }
 }
 
 extension CatListPresenter: CatListInteractorOutputProtocol {
     func didRetrieveCatListSuccess(catList: [CatInfo]) {
-        view?.showCatList(with: catList)
+        if catList.count > 0 {
+            view?.showCatList(with: catList)
+        }
+        else {
+            view?.showEmptyListMessage()
+        }
     }
     
     func onError(with message: String) {
+        view?.showReloadOption()
         router?.showAlertView(from: view!, withTitle: "Error", andMessage: message)
     }
 }

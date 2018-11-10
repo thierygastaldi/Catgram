@@ -16,6 +16,12 @@ class CatDetailsInteractor: CatDetailsInteractorInputProtocol {
     
     func retrieveCatDetails(with catInfo: CatInfo) {
         
+        // Check connection
+        if !Connectivity.isConnectedToInternet {
+            self.presenter?.onError(with: "The Internet connection appears to be offline.")
+            return
+        }
+        
         // set default configurations
         let configuration = URLSessionConfiguration.default
         sessionManager = Alamofire.SessionManager(configuration: configuration)
@@ -31,8 +37,15 @@ class CatDetailsInteractor: CatDetailsInteractorInputProtocol {
         
         // request with the session manager
         sessionManager?.request(path, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
-            debugPrint(response)
-            let objectResponse = response.result.value as! NSDictionary
+
+            guard case let .failure(error) = response.result else {
+                debugPrint(response)
+                let catInfo = Mapper<CatInfo>().map(JSONObject: response.result.value)
+                self.presenter?.didRetrieveCatDetailsSuccess(with: catInfo!)
+                return
+            }
+            
+            self.presenter?.onError(with: "\(error.localizedDescription)")
         }
     }
 }

@@ -17,10 +17,19 @@ class CatDetailsPresenter: CatDetailsPresenterProtocol {
     func viewDidLoad() {
         interactor?.retrieveCatDetails(with: catInfo!)
     }
+    
+    func reloadData() {
+        interactor?.retrieveCatDetails(with: catInfo!)
+    }
 }
 
 extension CatDetailsPresenter: CatDetailsInteractorOutputProtocol {
     func didRetrieveCatDetailsSuccess(with catInfo: CatInfo) {
         view?.showCatDetails(with: catInfo)
+    }
+    
+    func onError(with message: String) {
+        view?.showReloadOption()
+        router?.showAlertView(from: view!, withTitle: "Error", andMessage: message)
     }
 }

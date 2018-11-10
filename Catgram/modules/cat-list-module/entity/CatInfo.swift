@@ -20,7 +20,7 @@ class CatInfo: Mappable {
     var url: String?
     var width: Float?
     var height: Float?
-    var hasLike: Bool?
+    var hasLike: Bool? = false
     
     required init?(map:Map) {
         mapping(map: map)

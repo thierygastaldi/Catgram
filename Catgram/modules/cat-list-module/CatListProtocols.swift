@@ -13,6 +13,8 @@ protocol CatListViewProtocol: class {
     var presenter: CatListPresenterProtocol? { get set }
     
     func showCatList(with catList: [CatInfo])
+    func showEmptyListMessage()
+    func showReloadOption()
 }
 
 protocol CatListRouterProtocol: class {
@@ -40,4 +42,5 @@ protocol CatListPresenterProtocol: class {
     
     func viewDidLoad()
     func showCatDetails(with catInfo: CatInfo)
+    func reloadData()
 }

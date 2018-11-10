@@ -18,7 +18,7 @@ class CatListInteractor: CatListInteractorInputProtocol {
         
         // Check connection
         if !Connectivity.isConnectedToInternet {
-            self.presenter?.onError(with: "No internet connection.")
+            self.presenter?.onError(with: "The Internet connection appears to be offline.")
             return
         }
         
@@ -35,11 +35,18 @@ class CatListInteractor: CatListInteractorInputProtocol {
         
         // request with the session manager
         sessionManager?.request(URL_CAT_LIST, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
-            debugPrint(response)
-            let arrayResponse = response.result.value as! NSArray
-            let arrayObject = Mapper<CatInfo>().mapArray(JSONArray: arrayResponse as! [[String : Any]])
-            debugPrint(arrayObject)
-            self.presenter?.didRetrieveCatListSuccess(catList: arrayObject)
+            
+            guard case let .failure(error) = response.result else {
+                debugPrint(response)
+                let arrayResponse = response.result.value as! NSArray
+                let arrayObject = Mapper<CatInfo>().mapArray(JSONArray: arrayResponse as! [[String : Any]])
+                debugPrint(arrayObject)
+                self.presenter?.didRetrieveCatListSuccess(catList: arrayObject)
+                return
+            }
+            
+            self.presenter?.onError(with: "\(error.localizedDescription)")
+
         }
     }
 }

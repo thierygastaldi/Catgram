@@ -8,5 +8,5 @@
 
 import Foundation
 
-let URL_CAT_LIST: String = "https://api.thecatapi.com/v1/images/search/?limit=10"
+let URL_CAT_LIST: String = "https://api.thecatapi.com/v1/images/search/?limit=30&order=DESC&page=4"
 let URL_CAT_INFO: String = "https://api.thecatapi.com/v1/images/"

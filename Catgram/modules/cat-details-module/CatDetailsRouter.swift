@@ -29,6 +29,15 @@ class CatDetailsRouter: CatDetailsRouterProtocol {
         return UIViewController()
     }
     
+    func showAlertView(from view: CatDetailsViewProtocol, withTitle title: String, andMessage message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        
+        if let sourceView = view as? UIViewController {
+            sourceView.present(alert, animated: true, completion: nil)
+        }
+    }
+    
     static var mainStoryboard: UIStoryboard {
         return UIStoryboard(name: "Main", bundle: Bundle.main)
     }

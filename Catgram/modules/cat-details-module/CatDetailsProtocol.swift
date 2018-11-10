@@ -13,6 +13,12 @@ protocol CatDetailsViewProtocol: class {
     var presenter: CatDetailsPresenterProtocol? { get set }
     
     func showCatDetails(with catInfo: CatInfo)
+    func showReloadOption()
+}
+
+protocol CatDetailsRouterProtocol: class {
+    static func createCatDetailsModule(with catInfo: CatInfo) -> UIViewController
+    func showAlertView(from view: CatDetailsViewProtocol, withTitle title: String, andMessage message: String)
 }
 
 protocol CatDetailsInteractorInputProtocol: class {
@@ -23,10 +29,7 @@ protocol CatDetailsInteractorInputProtocol: class {
 
 protocol CatDetailsInteractorOutputProtocol: class {
     func didRetrieveCatDetailsSuccess(with catInfo: CatInfo)
-}
-
-protocol CatDetailsRouterProtocol: class {
-    static func createCatDetailsModule(with catInfo: CatInfo) -> UIViewController
+    func onError(with message:String)
 }
 
 protocol CatDetailsPresenterProtocol: class {
@@ -36,4 +39,5 @@ protocol CatDetailsPresenterProtocol: class {
     var catInfo: CatInfo? { get set }
     
     func viewDidLoad()
+    func reloadData()
 }
