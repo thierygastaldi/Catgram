@@ -35,18 +35,26 @@ class CatListInteractor: CatListInteractorInputProtocol {
         
         // request with the session manager
         sessionManager?.request(URL_CAT_LIST, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
-            
             guard case let .failure(error) = response.result else {
                 debugPrint(response)
-                let arrayResponse = response.result.value as! NSArray
-                let arrayObject = Mapper<CatInfo>().mapArray(JSONArray: arrayResponse as! [[String : Any]])
-                debugPrint(arrayObject)
-                self.presenter?.didRetrieveCatListSuccess(catList: arrayObject)
+                if response.result.value is NSArray {
+                    let arrayResponse = response.result.value as! NSArray
+                    if arrayResponse is [[String : Any]] {
+                        let arrayObject = Mapper<CatInfo>().mapArray(JSONArray: arrayResponse as! [[String : Any]])
+                        debugPrint(arrayObject)
+                        self.presenter?.didRetrieveCatListSuccess(catList: arrayObject)
+                    }
+                    else {
+                        self.presenter?.onError(with: "Unexpected Error")
+                    }
+                }
+                else {
+                    self.presenter?.onError(with: "Unexpected Error")
+                }
                 return
             }
-            
             self.presenter?.onError(with: "\(error.localizedDescription)")
-
         }
     }
+    
 }

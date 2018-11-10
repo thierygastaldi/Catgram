@@ -35,17 +35,21 @@ class CatDetailsInteractor: CatDetailsInteractorInputProtocol {
         
         let path = URL_CAT_INFO + catInfo.id!
         
-        // request with the session manager
+        // request cat details with the session manager
         sessionManager?.request(path, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
-
             guard case let .failure(error) = response.result else {
                 debugPrint(response)
-                let catInfo = Mapper<CatInfo>().map(JSONObject: response.result.value)
-                self.presenter?.didRetrieveCatDetailsSuccess(with: catInfo!)
+                if response.result.value != nil {
+                    let catInfo = Mapper<CatInfo>().map(JSONObject: response.result.value)
+                    self.presenter?.didRetrieveCatDetailsSuccess(with: catInfo!)
+                }
+                else {
+                    self.presenter?.onError(with: "Unexpected Error")
+                }
                 return
             }
-            
             self.presenter?.onError(with: "\(error.localizedDescription)")
         }
     }
 }
+
