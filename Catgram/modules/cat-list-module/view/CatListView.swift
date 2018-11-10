@@ -32,6 +32,12 @@ class CatListView: UIViewController {
         
         // Register nib cell
         tableView.register(UINib(nibName: "CatTableViewCell", bundle: nil), forCellReuseIdentifier: "CatTableViewCell")
+        
+        // Customize segmentedcontrol
+        let firstViewOfSegment: UIView = segmentedControl.subviews[0] as UIView
+        let secondViewOfSegment: UIView = segmentedControl.subviews[1] as UIView
+        firstViewOfSegment.tintColor = Layout.mainColor
+        secondViewOfSegment.tintColor = Layout.mainColor
     }
     
     @objc func reloadData(_ sender: UITapGestureRecognizer) {
